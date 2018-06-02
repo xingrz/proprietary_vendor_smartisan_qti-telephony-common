@@ -2786,7 +2786,7 @@
     :cond_9
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/qualcomm/qti/internal/telephony/QtiSubscriptionController;->mCmccFeatureEnabled:Z
+    const v0, 0x0
 
     move/from16 v23, v0
 
@@ -2858,7 +2858,7 @@
     :cond_d
     move-object/from16 v0, p0
 
-    iget-boolean v0, v0, Lcom/qualcomm/qti/internal/telephony/QtiSubscriptionController;->mCmccFeatureEnabled:Z
+    const v0, 0x0
 
     move/from16 v23, v0
 

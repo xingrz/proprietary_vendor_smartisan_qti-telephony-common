@@ -790,31 +790,6 @@
     invoke-virtual {v0, v1, p1}, Lcom/qualcomm/qti/internal/telephony/QtiRadioCapabilityController;->radioCapabilityUpdated(ILcom/android/internal/telephony/RadioCapability;)V
 
     :cond_0
-    sget-object v1, Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;->mStackImei:[Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;->getStackId()I
-
-    move-result v2
-
-    aget-object v1, v1, v2
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;->mCi:Lcom/android/internal/telephony/CommandsInterface;
-
-    const/16 v2, 0x15
-
-    invoke-virtual {p0, v2}, Lcom/qualcomm/qti/internal/telephony/QtiGsmCdmaPhone;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v2
-
-    invoke-interface {v1, v2}, Lcom/android/internal/telephony/CommandsInterface;->getDeviceIdentity(Landroid/os/Message;)V
-
-    :cond_1
     return-void
 .end method
 
